@@ -1,6 +1,7 @@
 /* Constants */
 const START_TIMER = 150;
 const NB_CALCULATIONS = 10;
+const PENALTY_SEC = 10;
 const A_LOWEST = 10;
 const A_HIGHEST = 20;
 const B_LOWEST = 2;
@@ -129,7 +130,7 @@ function checkResult(result){
 		updateProgressBar();
 		manageGame();
 	} else {
-		penalty += 5;
+		penalty += PENALTY_SEC;
 		$('#feedback').text(' X').addClass('failed').removeClass('success').show();
 		setTimeout(() => {$('#feedback').fadeOut("slow")}, 1000);
 		
