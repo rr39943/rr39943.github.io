@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculotiti</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div id="appName">CalculoTiti</div>
+    <div id="timer"></div>
+    <div id="progressBar">
+        <div id="nbSolvedCalcs"></div>
+    </div>
+    <div id="game">
+        <div id="calculation"></div>
+        <div id="feedback"></div>
+    </div>
+    <p id="message"></p>
+    <p id="pressKeyMsg">Appuie sur une touche pour commencer<p>
+    <script>
+      // Alternative to DOMContentLoaded event
+      document.onreadystatechange = () => {
+        if (document.readyState === "interactive") {
+          startGame();
+        }
+      };
+
+      // manageGame();
+      // displayTimer();
+      // start_timer();
+    </script>
+  </body>
+
+</html> 

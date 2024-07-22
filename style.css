@@ -1,0 +1,82 @@
+body {
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+@font-face {
+	font-family: digitalFont;
+	src: url("digital-7 (mono).ttf");
+}
+
+#appName{
+	font-family: arial;
+	font-size: 20px;
+	text-align:left;
+	letter-spacing: 4px;
+}
+
+#timer {
+	font-size: 80pt;
+	font-family: digitalFont;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	letter-spacing: 8px;
+}
+
+#game {
+	margin-top: 50px;
+	font-family: digitalFont;
+	font-size: 50px;
+	letter-spacing: 5px;
+}
+
+#feedback {
+	font-size: 100px;
+	font-family: arial;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+}
+
+.success {
+	color: green;
+}
+
+.failed {
+	color: red;
+}
+
+#calc {
+	font-family: digitalFont;
+	font-size: 50px;
+	width: 80px;
+}
+
+#message {
+	font-size: 80px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-family: arial;
+}
+
+#pressKeyMsg {
+	font-size: 30px;
+	font-family: arial;
+	margin-top: 30px;
+}
+
+#progressBar {
+	width: 400px;
+	height: 20px;
+	border: 2px solid;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#nbSolvedCalcs {
+	background-color: white;
+	height: 20px;
+	width: 40px;
+}
