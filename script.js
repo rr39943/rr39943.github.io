@@ -1,11 +1,11 @@
 /* Constants */
 const START_TIMER = 150;
-const NB_CALCULATIONS = 10;
+const NB_CALCULATIONS = 25;
 const PENALTY_SEC = 10;
-const A_LOWEST = 10;
-const A_HIGHEST = 20;
-const B_LOWEST = 2;
-const B_HIGHEST = 20;
+const A_LOWEST = 5;
+const A_HIGHEST = 10;
+const B_LOWEST = 5;
+const B_HIGHEST = 10;
 const OP_POSSIBLE = ['-', '+'];
 
 var calculations
