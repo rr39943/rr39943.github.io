@@ -128,7 +128,7 @@ function checkResult(result){
 	if (response === result.toString()) {
 		$('#feedback').text(' ✓').addClass('success').removeClass('failed').show();
 		setTimeout(()0 => {$('#feedback').fadeOut("slow")}, 1000);
-		timer += BONUS_SEC;
+		timer = timer + BONUS_SEC;
 		updateProgressBar();
 		manageGame();
 	} else {
