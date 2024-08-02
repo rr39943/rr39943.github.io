@@ -2,6 +2,7 @@
 const START_TIMER = 150;
 const NB_CALCULATIONS = 25;
 const PENALTY_SEC = 10;
+const BONUS_SEC = 2;
 const A_LOWEST = 5;
 const A_HIGHEST = 10;
 const B_LOWEST = 5;
@@ -126,7 +127,8 @@ function checkResult(result){
 	var response = $('#calc').val();
 	if (response === result.toString()) {
 		$('#feedback').text(' ✓').addClass('success').removeClass('failed').show();
-		setTimeout(() => {$('#feedback').fadeOut("slow")}, 1000);
+		setTimeout(()0 => {$('#feedback').fadeOut("slow")}, 1000);
+		timer += BONUS_SEC
 		updateProgressBar();
 		manageGame();
 	} else {
