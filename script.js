@@ -1,8 +1,8 @@
 /* Constants */
-const START_TIMER = 150;
+const START_TIMER = 30;
 const NB_CALCULATIONS = 25;
 const PENALTY_SEC = 10;
-const BONUS_SEC = 0;
+const BONUS_SEC = 5;
 const A_LOWEST = 5;
 const A_HIGHEST = 10;
 const B_LOWEST = 5;
@@ -128,7 +128,13 @@ function checkResult(result){
 	if (response === result.toString()) {
 		$('#feedback').text(' ✓').addClass('success').removeClass('failed').show();
 		setTimeout(() => {$('#feedback').fadeOut("slow")}, 1000);
-		timer = timer + BONUS_SEC;
+		if (penalty < 0) {
+			penalty = 0;
+		}
+		penalty -= BONUS_SEC;
+		if (penalty < -BONUS_SEC) {
+			penalty = -BONUS_SEC
+		}
 		updateProgressBar();
 		manageGame();
 	} else {
@@ -157,13 +163,26 @@ function displayTimer(){
 	let minutes = Math.trunc(timer / 60);
 	let txtTimer = `${minutes}:${seconds}`;
 	$('#timer').html(txtTimer);
+	if (penalty < 0) {
+		$('#timer').css('color', 'green');
+	}
+	else if ((penalty > 0) | (timer < 10)) {
+		$('#timer').css('color', 'red');
+	} else {
+		$('#timer').css('color', 'white');
+	}
+	$('#timer')
 }
 
 function manageTimer(){
 	if (timerStopped){
 		return;
 	}
-	timer--
+	if (penalty >= 0) {
+		timer--;
+	} else {
+		penalty++;
+	}
 	if (timer < 0) {
 		timer = 0;
 	}
