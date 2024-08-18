@@ -1,8 +1,8 @@
 /* Constants */
 const START_TIMER = 30;
-const NB_CALCULATIONS = 25;
+const NB_CALCULATIONS = 20;
 const PENALTY_SEC = 10;
-const BONUS_SEC = 5;
+const BONUS_SEC = 6;
 const A_LOWEST = 5;
 const A_HIGHEST = 10;
 const B_LOWEST = 5;
