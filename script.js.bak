@@ -1,13 +1,13 @@
 /* Constants */
-const START_TIMER = 30;
+const START_TIMER = 60;
 const NB_CALCULATIONS = 20;
-const PENALTY_SEC = 5;
+const PENALTY_SEC = 10;
 const BONUS_SEC = 5;
 const A_LOWEST = 1;
-const A_HIGHEST = 12;
+const A_HIGHEST = 19;
 const B_LOWEST = 1;
-const B_HIGHEST = 10;
-const OP_POSSIBLE = ['x'];
+const B_HIGHEST = 19;
+const OP_POSSIBLE = ['+'];
 
 var calculations
 var timer
@@ -18,7 +18,7 @@ var penalty
 
 function validateCalculation(calculation){
 	// if ((0 < calculation['a'] - calculation['b']) && (calculation['a'] - calculation['b'] < 10)) {
-	if ([2, 5, 10].includes(calculation['b'])) {
+	if (true) {
 		return true;
 	}
 	else{
@@ -34,8 +34,6 @@ function generateCalculation(){
 		var result = a + b;
 	} else if (op === '-') {
 		var result = a - b;
-	} else if (op == 'x') {
-		var result = a * b;
 	}
 	let calculation = {a: a,
 						b: b,
