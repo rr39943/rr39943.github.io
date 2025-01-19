@@ -1,5 +1,5 @@
 /* Constants */
-const START_TIMER = 30;
+const START_TIMER = 45;
 const NB_CALCULATIONS = 20;
 const PENALTY_SEC = 5;
 const BONUS_SEC = 5;
