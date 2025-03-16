@@ -19,7 +19,7 @@ var penalty
 function validateCalculation(calculation){
 	// if ((0 < calculation['a'] - calculation['b']) && (calculation['a'] - calculation['b'] < 10)) {
 	if ([2, 3, 4, 5, 6, 10].includes(calculation['b'])) {
-		if (calculation['a'] === 6 & ![6, 12].includes(calculation['b']) | calculation['b'] === 6 & ![6, 12].includes(calculation['a'])) {
+		if (calculation['a'] === 6 & ![6, 7, 12].includes(calculation['b']) | calculation['b'] === 6 & ![6, 7, 12].includes(calculation['a'])) {
 			return false;
 		}
 		return true;
