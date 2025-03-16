@@ -3,10 +3,10 @@ const START_TIMER = 45;
 const NB_CALCULATIONS = 20;
 const PENALTY_SEC = 5;
 const BONUS_SEC = 5;
-const A_LOWEST = 1;
+const A_LOWEST = 2;
 const A_HIGHEST = 12;
-const B_LOWEST = 1;
-const B_HIGHEST = 10;
+const B_LOWEST = 2;
+const B_HIGHEST = 12;
 const OP_POSSIBLE = ['x'];
 
 var calculations
@@ -18,8 +18,12 @@ var penalty
 
 function validateCalculation(calculation){
 	// if ((0 < calculation['a'] - calculation['b']) && (calculation['a'] - calculation['b'] < 10)) {
-	if ([2, 3, 5, 10].includes(calculation['b'])) {
+	if ([2, 3, 4, 5, 6, 10].includes(calculation['b'])) {
+		if (calculation['a'] === 6 & ![6, 12].includes(calculation['b']) | calculation['b'] === 6 & ![6, 12].includes(calculation['a'])) {
+			return false;
+		}
 		return true;
+		
 	}
 	else{
 		return false
