@@ -18,8 +18,8 @@ var penalty
 
 function validateCalculation(calculation){
 	// if ((0 < calculation['a'] - calculation['b']) && (calculation['a'] - calculation['b'] < 10)) {
-	if ([2, 3, 4, 5, 6, 10].includes(calculation['b'])) {
-		return true;
+	if ([2, 3, 4, 5, 6, 10].includes(calculation['b'])){
+		return true;}
 }
 
 function generateCalculation(){
